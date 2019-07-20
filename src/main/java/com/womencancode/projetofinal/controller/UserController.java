@@ -30,6 +30,17 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<User> insertUser(@RequestBody User user) throws Exception {
+
+        String nome;
+        if(user.getUsername() !=null) {
+            nome = user.getUsername();
+        }else {
+            nome = "";
+        }
+        User.builder()
+                .username(nome)
+                .build();
+
         return ResponseEntity.ok(service.insertUser(user));
     }
 

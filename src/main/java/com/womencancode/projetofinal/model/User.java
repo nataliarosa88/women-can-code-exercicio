@@ -3,12 +3,14 @@ package com.womencancode.projetofinal.model;
 import com.mongodb.lang.NonNull;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.Wither;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
+
 
 @Document
     @Data
